@@ -28,6 +28,7 @@ public class Aluno {
 
   private String nome;
 
+  //não pderá haver cpfs repetidos
   @Column(unique = true)
   private String cpf;
 
@@ -36,6 +37,7 @@ public class Aluno {
   private LocalDate dataDeNascimento;
 
   //um aluno pode ter várias avaliações
+  //mappedby relaciona com a coluna de destino
   //LAZY - carrega sob demanda apenas
   @OneToMany(mappedBy = "aluno", fetch = FetchType.LAZY)
   @JsonIgnore
