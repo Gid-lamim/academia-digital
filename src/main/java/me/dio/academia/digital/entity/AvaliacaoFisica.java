@@ -8,14 +8,12 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @Table(name = "tb_avaliacoes")
-@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-
-
 public class AvaliacaoFisica {
 
   @Id
