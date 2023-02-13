@@ -28,8 +28,7 @@ public class AlunoServiceImpl implements IAlunoService {
 
     @Override
     public List<Aluno> getAll() {
-
-        return null;
+        return repository.findAll();
     }
 
     @Override
