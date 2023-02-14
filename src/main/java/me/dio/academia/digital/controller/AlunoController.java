@@ -7,6 +7,7 @@ import me.dio.academia.digital.service.impl.AlunoServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 //é aqui que ficam os métodos do CRUD
@@ -27,7 +28,7 @@ public class AlunoController {
     //Post irá ser usado para criar o aluno
     //precisamos passar um formulário JSON no body
     @PostMapping
-    public Aluno create(@RequestBody AlunoForm form){
+    public Aluno create(@Valid @RequestBody AlunoForm form){
         return service.create(form);
     }
 
